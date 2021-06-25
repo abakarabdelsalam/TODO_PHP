@@ -24,7 +24,7 @@
                 <div class="todo-list"></div>
             </div>
         </div>
-        <footer class="footer">2021 © Tous droits réservés</footer>
+        <footer>2021 © Tous droits réservés</footer>
     </div>
 </body>
 
