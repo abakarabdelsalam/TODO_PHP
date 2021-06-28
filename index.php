@@ -3,6 +3,7 @@ const ERROR_REQUIRED = 'Veuillez sesir un text';
 const ERROR_TOO_SHORT = 'Veuillez entrer au moins 5 caractères';
 $filname = __DIR__ . "/data/todos.json";
 $error = '';
+$todo = '';
 $todos = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -51,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h1>Ma Todo</h1><br>
                 <div class="todo-form">
                     <form class="todo-form" action="./" method="post">
-                        <input name="todo" type="text">
+                        <input value="<?= $todo ?>" name="todo" type="text">
                         <button class="btn btn-primary">Ajouter</button>
                     </form>
 
@@ -62,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <ul class="todo-list"><br>
                     <?php foreach ($todos as $st) : ?>
-                    <li>
+                    <li class="todo-item">
                         <span class="todo-name"><?= $st['name'] ?> </span>
                         <button class="btn btn-primary btn-small">Valider</button>
                         <button class="btn btn-denger btn-small">Supprimer</button>
